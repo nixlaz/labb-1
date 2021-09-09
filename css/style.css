@@ -1,3 +1,4 @@
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -26,7 +27,7 @@ nav {
     font-family: 'Anton', sans-serif;
     text-transform:uppercase;
     letter-spacing: .4rem;
-    padding-top: 20px;
+    padding-top: 24px;
 }
 .nav-wrapper .logo a {
     text-decoration: none;
@@ -50,15 +51,111 @@ nav {
     list-style: none;
     font-size: 24px;
 }
+.nav-wrapper li, .nav-wrapper a{
+    display: inline-block;
+    height: 4.5rem;
+    line-height: 4.5rem;
+}
 .nav-wrapper li a {
     color: #fff;
     text-decoration: none;
+    transition-duration: .5s;
+}
+.nav-wrapper li a:hover {
+    transition-duration: .5s;
 }
 
 #landing {
-    padding-top: 150px;
+    position: relative;
+}
+#landing svg{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
 }
 .container {
     width:80%;
+    height: 80vh;
     margin: auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-start {
+    align-items: flex-start;
+    padding-top: 50px;
+}
+.container img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+}
+.container p {
+    max-width: 300px;
+    padding-left: 50px;
+}
+.content {
+    background: #fff;
+    width: 60%;
+    height: auto;
+    -webkit-box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 10px 15px 5px rgba(0,0,0,0.3);
+    padding: 1rem 3rem;
+}
+
+.goals {
+    list-style: none;
+    counter-reset: counter;
+}
+.goals li {
+    counter-increment: counter;
+    font-size: 18px;
+    position: relative;
+}
+.goals li:first-child {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.goals li::before {
+    font-family: Montserrat, sans-serif;
+    content: counter(counter);
+    font-weight: bold;
+    font-size: 12px;
+    position: absolute;
+    line-height: 20px;
+    left: -30px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    width: 100%;
+    text-align: center;
+    background: #693250;
+    height: 25vh;
+}
+.footer-content {
+    color: #fff;
+}
+.footer-content h2 {
+    margin-bottom: 20px;
+}
+.footer-content ul {
+    list-style: none;
+}
+.footer-content ul li a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.8rem;
 }
